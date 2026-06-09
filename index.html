@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#0d0d14" />
+    <meta name="description" content="حسین اکبری سامانی — برنامه‌نویس ارشد پایتون، متخصص Back-end و معماری نرم‌افزار" />
+
+    <!-- Preconnect to Supabase -->
+    <link rel="preconnect" href="https://cdwslmsinhaysuohylof.supabase.co" crossorigin />
+    <link rel="dns-prefetch" href="https://cdwslmsinhaysuohylof.supabase.co" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>حسین اکبری سامانی — برنامه‌نویس ارشد پایتون</title>
+
+    <style>
+      html, body { margin: 0; padding: 0; background: #050508; color: #e4e4e7; }
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(ellipse at center, #0d0d14 0%, #050508 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+      }
+      #initial-loader .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(139, 92, 246, 0.2);
+        border-top-color: #8b5cf6;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+
+    <!-- Android detection — runs قبل از React -->
+    <script>
+      (function() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (/android/.test(ua)) {
+          document.documentElement.classList.add('is-android');
+        }
+        if (/iphone|ipad|ipod/.test(ua)) {
+          document.documentElement.classList.add('is-ios');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div id="initial-loader">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
